@@ -1,15 +1,21 @@
 import React from 'react';
-import './styles.css';
-// import product from "./product.json";
+import './Products.css';
 
-export default function Products() {
+export default function Products(props) {
+  const { data } = props;
   return (
     <div className="product-parent">
-      <div>
-        <div>Name</div>
-        <div>Image</div>
-        <div>Price</div>
-      </div>
+      {data.map((item, index) => {
+        return (
+          <div key={index}>
+            <div>{item.name}</div>
+            <div>
+              <img className="img-name" src={item.image} />
+            </div>
+            <div>{item.price}</div>
+          </div>
+        );
+      })}
     </div>
   );
 }

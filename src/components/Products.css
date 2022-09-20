@@ -1,0 +1,11 @@
+.product-parent {
+  background: red;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.img-name {
+  width: 200px;
+  height: auto;
+}
